@@ -6,8 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define DEF 0
 #define ALT 1
@@ -15,173 +13,249 @@
 / {
     macros {
         /* @: AltGr; */
+
         ma_1: ma_1 {
             label = "ma_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp SEMI>
-                , <&macro_release &kp RALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp SEMI>,
+                <&macro_release>,
+                <&kp RALT>;
         };
+
         /* #: AltGr' */
+
         ma_2: ma_2 {
             label = "ma_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp SQT>
-                , <&macro_release &kp RALT>
-                ;
-        };		
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp SQT>,
+                <&macro_release>,
+                <&kp RALT>;
+        };
+
         /* [: AltGr[ */
+
         ma_3: ma_3 {
             label = "ma_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp LBKT>
-                , <&macro_release &kp RALT>
-                ;
-        };				
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp LBKT>,
+                <&macro_release>,
+                <&kp RALT>;
+        };
+
         /* ]: AltGr] */
+
         ma_4: ma_4 {
             label = "ma_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp RBKT>
-                , <&macro_release &kp RALT>
-                ;
-        };						
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp RBKT>,
+                <&macro_release>,
+                <&kp RALT>;
+        };
+
         /* ²: Alt253 */
+
         ma_5: ma_5 {
             label = "ma_5";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N2>
-                , <&macro_tap &kp KP_N5>
-                , <&macro_tap &kp KP_N3>				
-                , <&macro_release &kp LALT>
-                ;
-        };								
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N5>,
+                <&macro_tap>,
+                <&kp KP_N3>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
         /* ~: Alt126 */
+
         ma_6: ma_6 {
             label = "ma_6";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N1>
-                , <&macro_tap &kp KP_N2>
-                , <&macro_tap &kp KP_N6>				
-                , <&macro_release &kp LALT>
-                ;
-        };										
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N1>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
         /* ×: Alt0215 */
+
         ma_7: ma_7 {
             label = "ma_7";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N2>				
-                , <&macro_tap &kp KP_N1>
-                , <&macro_tap &kp KP_N5>				
-                , <&macro_release &kp LALT>
-                ;
-        };									
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N1>,
+                <&macro_tap>,
+                <&kp KP_N5>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
         /* ÷: Alt0247 */
+
         ma_8: ma_8 {
             label = "ma_8";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N2>				
-                , <&macro_tap &kp KP_N4>
-                , <&macro_tap &kp KP_N7>				
-                , <&macro_release &kp LALT>
-                ;
-        };								
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N4>,
+                <&macro_tap>,
+                <&kp KP_N7>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
+
         /* È: Alt0200 */
+
         ma_9: ma_9 {
             label = "ma_9";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N2>				
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N0>				
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         /* Ù: Alt0217 */
+
         ma_10: ma_10 {
             label = "ma_10";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N2>				
-                , <&macro_tap &kp KP_N1>
-                , <&macro_tap &kp KP_N7>				
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N1>,
+                <&macro_tap>,
+                <&kp KP_N7>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         /* Ì: Alt0204 */
+
         ma_11: ma_11 {
             label = "ma_11";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N2>				
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N4>				
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N4>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         /* Ò: Alt0210 */
+
         ma_12: ma_12 {
             label = "ma_12";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N2>				
-                , <&macro_tap &kp KP_N1>
-                , <&macro_tap &kp KP_N0>				
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_tap>,
+                <&kp KP_N1>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         /* À: Alt0192 */
+
         ma_13: ma_13 {
             label = "ma_13";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0>
-                , <&macro_tap &kp KP_N1>				
-                , <&macro_tap &kp KP_N9>
-                , <&macro_tap &kp KP_N2>				
-                , <&macro_release &kp LALT>
-                ;
-        };		
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0>,
+                <&macro_tap>,
+                <&kp KP_N1>,
+                <&macro_tap>,
+                <&kp KP_N9>,
+                <&macro_tap>,
+                <&kp KP_N2>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
     };
 };
 
@@ -202,21 +276,21 @@
 
         default_layer {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans             
+&kp ESC    &kp N1    &kp N2    &kp N3     &kp N4  &kp N5  &kp N6  &kp N7     &kp N8  &kp N9     &kp N0   &kp MINUS         &kp EQUAL          &kp BSPC
+&kp TAB    &kp Q     &kp W     &kp E      &kp R   &kp T   &kp Y   &kp U      &kp I   &kp O      &kp P    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp CAPS   &kp A     &kp S     &kp D      &kp F   &kp G   &kp H   &kp J      &kp K   &kp L      &trans   &trans                               &kp RET
+&kp LSHFT  &kp Z     &kp X     &kp C      &kp V   &kp B   &kp B   &kp N      &kp M   &kp COMMA  &kp DOT  &kp SLASH         &kp UP             &kp RSHFT
+&kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE          &trans          &kp SPACE          &trans     &kp DEL  &kp LEFT          &kp DOWN           &kp RIGHT
             >;
         };
 
         alternated_layer {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans    
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans          &trans          &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
