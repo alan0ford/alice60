@@ -1,0 +1,6 @@
+if SHIELD_ALICE60
+
+config ZMK_KEYBOARD_NAME
+    default "alice60"
+
+endif
