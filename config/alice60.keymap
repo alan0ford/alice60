@@ -12,70 +12,73 @@
 
 / {
     macros {
-        /* @: AltGr; */
+        /* è: `E */
 
         ma_1: ma_1 {
             label = "ma_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp SEMI>,
-                <&macro_release>,
-                <&kp RALT>;
+            bindings = <&macro_tap>, <&kp GRAVE>, <&macro_tap>, <&kp E>;
         };
 
-        /* #: AltGr' */
+        /* ù: `U */
 
         ma_2: ma_2 {
             label = "ma_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp SQT>,
-                <&macro_release>,
-                <&kp RALT>;
+            bindings = <&macro_tap>, <&kp GRAVE>, <&macro_tap>, <&kp U>;
         };
 
-        /* [: AltGr[ */
+        /* ì: `I */
 
         ma_3: ma_3 {
             label = "ma_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp LBKT>,
-                <&macro_release>,
-                <&kp RALT>;
+            bindings = <&macro_tap>, <&kp GRAVE>, <&macro_tap>, <&kp I>;
         };
 
-        /* ]: AltGr] */
+        /* ò: `O */
 
         ma_4: ma_4 {
             label = "ma_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp RBKT>,
-                <&macro_release>,
-                <&kp RALT>;
+            bindings = <&macro_tap>, <&kp GRAVE>, <&macro_tap>, <&kp O>;
+        };
+
+        /* à: `A */
+
+        ma_5: ma_5 {
+            label = "ma_5";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GRAVE>, <&macro_tap>, <&kp A>;
+        };
+
+        /* ': '  */
+
+        ma_6: ma_6 {
+            label = "ma_6";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp SQT>, <&macro_tap>, <&kp SPACE>;
+        };
+
+        /* `:`  */
+
+        ma_7: ma_7 {
+            label = "ma_7";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GRAVE>, <&macro_tap>, <&kp SPACE>;
         };
 
         /* ²: Alt253 */
 
-        ma_5: ma_5 {
-            label = "ma_5";
+        ma_8: ma_8 {
+            label = "ma_8";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -93,8 +96,8 @@
 
         /* ~: Alt126 */
 
-        ma_6: ma_6 {
-            label = "ma_6";
+        ma_9: ma_9 {
+            label = "ma_9";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -112,8 +115,8 @@
 
         /* ×: Alt0215 */
 
-        ma_7: ma_7 {
-            label = "ma_7";
+        ma_10: ma_10 {
+            label = "ma_10";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -133,69 +136,6 @@
 
         /* ÷: Alt0247 */
 
-        ma_8: ma_8 {
-            label = "ma_8";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_tap>,
-                <&kp KP_N2>,
-                <&macro_tap>,
-                <&kp KP_N4>,
-                <&macro_tap>,
-                <&kp KP_N7>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
-        /* È: Alt0200 */
-
-        ma_9: ma_9 {
-            label = "ma_9";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_tap>,
-                <&kp KP_N2>,
-                <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
-        /* Ù: Alt0217 */
-
-        ma_10: ma_10 {
-            label = "ma_10";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_tap>,
-                <&kp KP_N2>,
-                <&macro_tap>,
-                <&kp KP_N1>,
-                <&macro_tap>,
-                <&kp KP_N7>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
-        /* Ì: Alt0204 */
-
         ma_11: ma_11 {
             label = "ma_11";
             compatible = "zmk,behavior-macro";
@@ -208,53 +148,29 @@
                 <&macro_tap>,
                 <&kp KP_N2>,
                 <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_tap>,
                 <&kp KP_N4>,
+                <&macro_tap>,
+                <&kp KP_N7>,
                 <&macro_release>,
                 <&kp LALT>;
         };
-
-        /* Ò: Alt0210 */
 
         ma_12: ma_12 {
-            label = "ma_12";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_tap>,
-                <&kp KP_N2>,
-                <&macro_tap>,
-                <&kp KP_N1>,
-                <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
-        /* À: Alt0192 */
-
-        ma_13: ma_13 {
-            label = "ma_13";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
+                <&kp RIGHT_ALT>,
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RIGHT_SHIFT>,
                 <&macro_tap>,
-                <&kp KP_N0>,
-                <&macro_tap>,
-                <&kp KP_N1>,
-                <&macro_tap>,
-                <&kp KP_N9>,
-                <&macro_tap>,
-                <&kp KP_N2>,
+                <&kp SEMICOLON>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RIGHT_SHIFT>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>;
+
+            label = "MA_12";
         };
     };
 };
