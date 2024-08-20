@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/led/led.h>
 
 / {
     chosen {
@@ -49,4 +50,17 @@
 			, <&gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
+	 
+	aliases {
+        led-main = &led_0;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        status = "okay";
+        led_0: led_0 {
+            gpios = <&gpio0  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+	
 };
