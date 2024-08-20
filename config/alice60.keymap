@@ -173,6 +173,24 @@
 
             label = "MA_12";
         };
+
+        ma_13: ma_13 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LWIN>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LWIN>;
+
+            label = "MA_13";
+        };
     };
 };
 
@@ -205,7 +223,7 @@
             bindings = <
 &ma_7   &kp F1        &kp F2       &kp F3  &kp F4  &kp F5       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11       &kp F12        &kp PRINTSCREEN
 &trans  &ma_8         &trans       &ma_1   &trans  &ma_9        &trans  &ma_2   &ma_3   &ma_4   &ma_10   &trans        &trans         &trans
-&trans  &ma_5         &trans       &ma_11  &trans  &ma_12       &trans  &trans  &trans  &trans  &trans   &trans                       &kp HOME
+&trans  &ma_5         &ma_13       &ma_11  &trans  &ma_12       &trans  &trans  &trans  &trans  &trans   &trans                       &kp HOME
 &trans  &out OUT_USB  &trans       &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &trans   &trans        &kp PAGE_UP    &trans
 &trans  &kp C_MENU    &kp C_POWER  &trans          &trans               &trans          &trans  &trans   &kp C_VOL_DN  &kp PAGE_DOWN  &kp C_VOL_UP
             >;
