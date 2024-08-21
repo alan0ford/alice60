@@ -2,9 +2,5 @@ if SHIELD_ALICE60
 
 config ZMK_KEYBOARD_NAME
     default "alice60"
-	
-# LED indicators
-CONFIG_ZMK_HID_INDICATORS=y
-CONFIG_LED=y
 
 endif
